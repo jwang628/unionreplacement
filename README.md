@@ -22,9 +22,9 @@ restart postgresql<br>
         WHERE cond1 AND (cond2 OR cond2 OR cond3);              hint: \_and_3\_)
         WHERE cond1 OR cond2;                                   hint: _where_1
         WHERE cond1 AND (cond2 OR cond3) ORDER BY;              hint: _and_1_order
-        WHERE cond1 AND (cond2 OR cond3 OR cond4);              hint: _and_2
+        WHERE cond1 AND (cond2 OR cond3 OR cond4);              hint: \_and_2
         WHERE cond1 AND ((cond2) OR (cond3) OR (cond4)) ORDER ; hint: bracked_and_2_order
         WHERE cond1 AND ((cond2) OR (cond3));                   hint: bracked_and_2
-        WHERE ((cond1) OR (cond2));                             hint: bracked_(_1
-        WHERE cond1 AND (cond2 OR cond3) AND cond4;             hint: _and_1_and
+        WHERE ((cond1) OR (cond2));                             hint: bracked\_(_1
+        WHERE cond1 AND (cond2 OR cond3) AND cond4;             hint: \_and_1_and
 </pre>
