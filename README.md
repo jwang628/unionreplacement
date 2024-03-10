@@ -17,3 +17,16 @@ add the extension:
 shared_preload_libraries = 'your_existing_extensions, unionreplacement'
 
 restart postgresql
+
+sample hints ( format: special_begin_numberofors_terminator )<br>
+        WHERE cond1 AND (cond2 OR (cond3 OR (cond4 OR cond5))); hint: nesteddoll_and_3
+        WHERE (cond1 OR cond2 OR cond3) AND cond4;              hint: _(_2_and
+        WHERE (cond1 OR cond2);                                 hint: _(_1
+        WHERE cond1 AND (cond2 OR cond2 OR cond3);              hint: _and_3_)
+        WHERE cond1 OR cond2;                                   hint: _where_1
+        WHERE cond1 AND (cond2 OR cond3) ORDER BY;              hint: _and_1_order
+        WHERE cond1 AND (cond2 OR cond3 OR cond4);              hint: _and_2
+        WHERE cond1 AND ((cond2) OR (cond3) OR (cond4)) ORDER ; hint: bracked_and_2_order
+        WHERE cond1 AND ((cond2) OR (cond3));                   hint: bracked_and_2
+        WHERE ((cond1) OR (cond2));                             hint: bracked_(_1
+        WHERE cond1 AND (cond2 OR cond3) AND cond4;             hint: _and_1_and
