@@ -27,5 +27,5 @@ restart postgresql<br>
         WHERE cond1 AND ((cond2) OR (cond3));                   hint: bracked_and_2
         WHERE ((cond1) OR (cond2));                             hint: bracked\_(_1
         WHERE cond1 AND (cond2 OR cond3) AND cond4;             hint: \_and_1_and
-        WHERE cond0 AND (cond1 OR cond2) AND cond4;             hint: _and_1_)   #if aobve not work
+        WHERE cond0 AND (cond1 OR cond2) AND cond4;             hint: \_and_1_)   #if aobve not work
 </pre>
